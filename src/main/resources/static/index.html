@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Dungeon</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <h1 class="header">Welcome to the Dungeon!</h1>
+    <form action="/cards" method="post">
+        Id: <input type="number" name="cardId" id="cardId"/>
+        Cost: <input type="text" name="cost" id="cost"/>
+        Card Type: <input type="text" name="typeId" id="typeId"/>
+        Name: <input type="text" name="name" id="name"/>
+        <button type="button" onclick="postCard()">Add Card</button>
+    </form>
+    <div id="cardsDiv"></div>
+    <script src="main.js"></script>
+</body>
+</html>
