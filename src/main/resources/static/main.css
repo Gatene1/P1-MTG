@@ -1,6 +1,10 @@
-body {
-    background-image:url('img.png');
-    background-repeat:no-repeat;
-    background-size:cover;
-    color:#ffffff;
-}
+body { background-image:url('background.jpg'); background-repeat:no-repeat; background-size:cover; color:#000000; }
+
+img.logo { display:block; margin:auto; }
+
+div.contents { display:block; margin:auto; }
+
+button.button { width:150px; height:35px; border-color:#dfdcc9; border-style:solid; background-color:#85a5ba; font-weight:bolder;}
+
+td.rj { text-align: right; }
+td.center { display:table-cell; text-align:center; }
