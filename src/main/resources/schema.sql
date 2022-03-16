@@ -17,9 +17,17 @@ CREATE TABLE "cards" (
 INSERT INTO "cards" VALUES (1,5,2,'Naomi Pillar of Order');
 INSERT INTO "cards" VALUES (2,3,2,'Satoru Umezawa');
 INSERT INTO "cards" VALUES (3,1,3,'Sol Ring');
+INSERT INTO "cards" VALUES (4,1,4,'Fading Hope');
+INSERT INTO "cards" VALUES (5,8,5,'Ugin, the Spirit Dragon');
+INSERT INTO "cards" VALUES (6,1,1,'Ruin Crab');
+INSERT INTO "cards" VALUES (7,2,6,'Maddening Cacophony');
+INSERT INTO "cards" VALUES (8,3,2,'Greasefang, Okiba Boss');
 
 
 
 -- INSERT INTO "types" VALUES (1, 'Creature');
 -- INSERT INTO "types" VALUES (2, 'Legendary Creature');
 -- INSERT INTO "types" VALUES (3, 'Artifact');
+-- INSERT INTO "types" VALUES (4, 'Instant');
+-- INSERT INTO "types" VALUES (5, 'Planeswalker');
+-- INSERT INTO "types" VALUES (6, 'Sorcery');

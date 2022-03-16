@@ -28,3 +28,13 @@ and pushed the project for my partner to look over.</li>
 of the JSON script we are using for the cards.
 Changed background and text color of server page.</li>
 </ul>
+
+```
+Tuesday, March 15, 2022
+```
+<ul>
+<li>I made a docker image of our project so far, and 
+uploaded it to the hub repository.</li>
+<li>I refactored code to split the app.java into legible
+classes.</li>
+</ul>

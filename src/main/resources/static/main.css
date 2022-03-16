@@ -1,10 +1,35 @@
-body { background-image:url('background.jpg'); background-repeat:no-repeat; background-size:cover; color:#000000; }
+html,body { min-height:100%; height:100%; }
+
+body { background-image:url('background.jpg'); background-repeat:no-repeat; background-size:cover; color:#000000;
+       padding:0px; margin:0px;}
 
 img.logo { display:block; margin:auto; }
 
-div.contents { display:block; margin:auto; }
+div.outerContents { display:block; width:100%; height:100%; background-image:linear-gradient(#5979a0,#7fa1ba); }
+                    /*#231c29,#431e3f (the purple)  #5979a0,#7fa1ba (the blue)*/
+div.contents { display:block; margin:auto; text-align:center;}
+div.midContents { display:block; width:max-content; padding:5px; margin:auto; margin-top:10%; }
+div.cardsDivClass { text-align:center;}
+div#cardsDiv {text-align:left; width:max-content; margin:auto; font-weight:bold; font-size:18pt;}
+div.adminButtons { position:absolute; bottom:30%; }
+div.pageBottom { background-color:#090930; position:absolute; height:300px; width:100%; bottom:0%; }
+div.outerbox { width:400px; height: 40px; text-align: left; border-color:#5979a0; border-style:solid; border-width:5px;
+    margin:auto; padding-left: 10px; padding-bottom:10px;
+    background-color:#294970; border-radius:40px; }
+
+input.innerbox { border:none; width:330px; height:40px; /*color:#7fa1ba;*/ color:#294970;
+    /*background-color:#294970*/ background-color:rgba(255, 255, 255, 0); font-weight:bold; font-size:24pt;}
+
+.innerbox:focus { outline:none; }
 
 button.button { width:150px; height:35px; border-color:#dfdcc9; border-style:solid; background-color:#85a5ba; font-weight:bolder;}
+button.mainMenu { height:50px; width:200px; padding:5px; background-color:#294970; color:#7fa1ba; border-radius:40px; font-size:16pt; }
+
+
+.glass{ background: linear-gradient(135deg,rgba(255,255,255,0.3),rgba(255,255,255,0));
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 10px; border: 5px solid rgba(255, 255, 255, .3);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
 
 td.rj { text-align: right; }
 td.center { display:table-cell; text-align:center; }

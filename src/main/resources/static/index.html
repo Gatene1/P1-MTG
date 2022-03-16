@@ -4,37 +4,33 @@
     <meta charset="UTF-8">
     <title>Welcome to the Dungeon</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="../../../../favicon.ico">
 </head>
 <body>
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Magicthegathering-logo.svg/512px-Magicthegathering-logo.svg.png?20160501122627%3E">
-    <div class="contents">
-        <h1 style="margin:auto;">Welcome to the Dungeon!</h1>
-        <form action="/cards" method="post">
-            <table style="margin:auto;">
-            <tr>
-                <td class="rj">Id: </td>
-                <td><input type="number" name="cardId" id="cardId"/><br></td>
-            </tr>
-            <tr>
-                <td class="rj">Cost: </td>
-                <td><input type="text" name="cost" id="cost"/><br></td>
-            </tr>
-            <tr>
-                <td class="rj">Card Type: </td>
-                <td><input type="text" name="typeId" id="typeId"/><br></td>
-            </tr>
-            <tr>
-                <td class="rj">Name: </td>
-                <td><input type="text" name="name" id="name"/><br></td>
-            </tr>
-            <tr>
-                <td colspan="2"  class="center"><button type="button" class="button" onclick="postCard()">Add Card</button></td>
-            </tr>
-            </table>
-        </form>
+    <div class="outerContents">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Magicthegathering-logo.svg/512px-Magicthegathering-logo.svg.png?20160501122627%3E">
+        <div class="midContents">
+            <div class="glass">
+                <table>
+                    <form>
+                        <tr>
+                            <td><img src="/icons/search.png"></td>
+                            <td><input class="innerbox" type="text"></td>
+                        </tr>
+                    </form>
+                </table>
+            </div><br><br><br>
+            <button class="glass" type="button">Random Card</button>
+            <button class="glass" type="button">All Cards</button>
+            <button class="glass" type="button">Add-A-Card</button>
+        </div>
+        <div class="adminButtons">
+            <button class="glass" type="button">Raw Data</button><br>
+            <button class="glass" type="button">Logging</button>
+        </div>
+        <div class="pageBottom">
+
+        </div>
     </div>
-    <div style="position:absolute; border-width:2px; border-style:solid; font-weight:bold;" id="cardsDiv"></div>
-    <script src="main.js"></script>
 </body>
 </html>
