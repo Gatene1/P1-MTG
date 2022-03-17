@@ -28,10 +28,13 @@ public class CardServlet extends HttpServlet {
         try {
             ResultSet rs = conn.prepareStatement("select * from cards").executeQuery();
             while (rs.next()) {
-                cards.add(new Card(rs.getInt("CardId"), rs.getInt("ManaCost"), rs.getInt("TypeId"), rs.getString("Name")));
+                cards.add(new Card(rs.getInt("CardId"), rs.getString("ManaCost"), rs.getString("TypeId"),
+                        rs.getString("Name"), rs.getString("Artist"), rs.getString("ColorIdentity"),
+                        rs.getLong("Multiverse"), rs.getString("Rarity"), rs.getInt("Power"),
+                        rs.getInt("Toughness")));
             }
         } catch (SQLException e) {
-            System.err.println("Failed to retrieve form DB: " + e.getSQLState());
+            System.err.println("Failed to retrieve form DB: " + e.getMessage());
         }
         // Get a JSON Mapper
         ObjectMapper mapper = new ObjectMapper();
@@ -45,11 +48,18 @@ public class CardServlet extends HttpServlet {
         ObjectMapper mapper = new ObjectMapper();
         Card newCard = mapper.readValue(req.getInputStream(), Card.class);
         try {
-            PreparedStatement stmt = conn.prepareStatement("insert into cards values (?, ?, ?, ?)");
+            PreparedStatement stmt = conn.prepareStatement("insert into 'cards' values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             stmt.setInt(1, newCard.getCardId());
-            stmt.setInt(2, newCard.getCost());
-            stmt.setInt(3, newCard.getTypeId());
+            stmt.setString(2, newCard.getCost());
+            stmt.setString(3, newCard.getTypeId());
             stmt.setString(4, newCard.getName());
+            stmt.setString(5, newCard.getArtist());
+            stmt.setString(6, newCard.getColorIdentity());
+            stmt.setLong(7, newCard.getMultiverse());
+            stmt.setString(8, newCard.getRarity());
+            stmt.setInt(9, newCard.getPower());
+            stmt.setInt(10, newCard.getToughness());
+
             stmt.executeUpdate();
             stmt.close();
         } catch (SQLException e) {

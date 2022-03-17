@@ -19,6 +19,9 @@ public class AllElseServlet extends HttpServlet {
 
         InputStream file = getClass().getClassLoader().getResourceAsStream(resourceDir + fileName);
 
+        String mimeType = getServletContext().getMimeType(fileName);
+        resp.setContentType(mimeType);
+
         if (file == null) {
             file = getClass().getClassLoader().getResourceAsStream(resourceDir + "/index.html");
         }

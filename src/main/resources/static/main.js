@@ -7,15 +7,26 @@ function listCards(json) {
 }
 
 let listCard = function(card) {
-    return '<p>' + card.cardId + ": " + card.cost + ": " + card.typeId + ": " + card.name + '</p>';
+    return '<image src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid='+card.multiverse+'&type=card">';
+    // return '<p>' + card.cardId + ": " + card.cost + ": " + card.typeId + ": " + card.name + ": " + card.artist + ": " +
+    //     card.colorIdentity + ": " + card.multiverse + ": " + card.rarity + ": " + card.power + ": " + card.toughness + '</p>';
 }
 
+function addCardButton(gotoURL) {
+    window.location.href = gotoURL;
+}
+// "Artist" VARCHAR NOT NULL,
+//     "ColorIdentity" VARCHAR NOT NULL,
+//     "Multiverse" LONG NOT NULL,
+//     "Rarity" VARCHAR NOT NULL,
+//     "Power" INT NOT NULL,
+//     "Toughness" INT NOT NULL,
 function postCard() {
     let card = {
         "cardId": document.getElementById("cardId").value,
         "cost": document.getElementById("cost").value,
         "typeId": document.getElementById("typeId").value,
-        "name": document.getElementById("name").value
+        "name": document.getElementById("name").value,
     }
     console.log(card);
     fetch("/cards", {

@@ -38,3 +38,17 @@ uploaded it to the hub repository.</li>
 <li>I refactored code to split the app.java into legible
 classes.</li>
 </ul>
+
+```
+Wednesday, March 16, 2022
+```
+<ul>
+<li>Fixed the SQL issues we were having by reordering the Create Table statements and the 
+Insert Into statements. The order of operations is what was causing the issues there.</li>
+<li>We added a few more cards to the in-memory rows to our database.</li>
+<li>Created the addCard.html file to be the old index.html, and remade the index.html to be 
+our landing page, and show a menu for the users.</li>
+<li>After adding the remaining fields we wanted to add for each card, I displayed the 
+in-memory cards on the addCard.html page.</li>
+<li>Uploaded an icon to my Web site that was giving us issues displaying on different computers.</li>
+</ul>

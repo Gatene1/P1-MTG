@@ -20,6 +20,7 @@ public class ServerClass {
         server.addServlet("", "DefaultServlet", new AllElseServlet()).addMapping("/*");
         server.addServlet("", "DefaultServlet2", new AllElseServlet()).addMapping(" ");
         server.addServlet("","cardServlet", new CardServlet()).addMapping("/cards");
+        server.addServlet("","addCardServlet", new AddACard()).addMapping("/addCard");
 
         try {
             server.start();
