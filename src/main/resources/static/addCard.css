@@ -1,0 +1,7 @@
+body { background-image:url("addACardWallpaper2.jpg"); background-repeat:no-repeat; background-size:cover;}
+
+img.logo { display:block; margin:auto; }
+
+div.pageBottom { background-color:#000000; position:absolute; height:300px; width:100%; bottom:-300px; left:0px;}
+
+canvas.addCardCanvas { background-color:transparent; position:absolute; right:5px; top:25%; }

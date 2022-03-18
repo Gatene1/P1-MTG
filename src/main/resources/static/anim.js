@@ -165,20 +165,33 @@ function imageReset() {
     let setInPlace = false;
     let rawInPlace = false;
     let logInPlace = false;
-    if (setX <= 63) {
-        setX += 15;
-    } else {
-        setInPlace = true;
-    }
-    if (rawSetX > -150) {
-        rawSetX -= 15;
-    } else {
-        rawInPlace = true;
-    }
-    if (logSetX > -150) {
-        logSetX -= 15;
-    } else {
-        logInPlace = true;
+
+     if (!setInPlace) {
+         if (rawSetX > -150) {
+             rawSetX -= 15;
+             ctx.drawImage(rawImg, rawSetX, rawSetY);
+         } else {
+             rawInPlace = true;
+         }
+         if (logSetX > -150) {
+             logSetX -= 15;
+             ctx.drawImage(logImg, logSetX, logSetY);
+         } else {
+             logInPlace = true;
+         }
+     } else {
+         ctx.drawImage(rawImg, rawSetX, rawSetY);
+         ctx.drawImage(logImg, logSetX, logSetY);
+     }
+
+    if (rawInPlace && logInPlace) {
+        if (setX < 78) {
+            setX += 15;
+            ctx.drawImage(img, setX, setY);
+        } else {
+            ctx.drawImage(img, setX, setY);
+            setInPlace = true;
+        }
     }
 
     if (setInPlace && rawInPlace && logInPlace) {

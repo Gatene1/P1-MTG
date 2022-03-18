@@ -62,4 +62,5 @@ Thursday, March 17, 2022
 <li>Made massive changes to the CSS files, and added some</li>
 <li>Added missing HTML files.</li>
 <li>compared and adjusted our files to keep them in synch.</li>
+<li>Finished adding information in card list.</li>
 </ul>

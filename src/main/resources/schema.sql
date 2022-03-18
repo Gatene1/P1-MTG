@@ -46,6 +46,8 @@ INSERT INTO "coloridentity" VALUES (4, 'Blue');
 INSERT INTO "coloridentity" VALUES (5, 'Green');
 INSERT INTO "coloridentity" VALUES (6, 'Gold');
 INSERT INTO "coloridentity" VALUES (7, 'Colorless');
+INSERT INTO "coloridentity" VALUES (8, 'Green/Blue');
+INSERT INTO "coloridentity" VALUES (9, 'Black/Red');
 
 INSERT INTO "rarity" VALUES (1, 'Common');
 INSERT INTO "rarity" VALUES (2, 'Uncommon');
@@ -60,3 +62,12 @@ INSERT INTO "cards" VALUES (5,'8',4,'Ugin, the Spirit Dragon','Raymond Swanland'
 INSERT INTO "cards" VALUES (6,'U',1,'Ruin Crab','Simon Dominic',4,491705,2,0,3);
 INSERT INTO "cards" VALUES (7,'1U',5,'Maddening Cacophony','Magali Villeneuve',4,491697,3,0,0);
 INSERT INTO "cards" VALUES (8,'1WB',1,'Greasefang, Okiba Boss','Victor Adame Minguez',6,548531,3,4,3);
+INSERT INTO "cards" VALUES (9,'2GU',1,'Grolnok,The Omnivore','Simon Dominic',8,541112,3,3,3);
+INSERT INTO "cards" VALUES (10,'4GG',1,'Avabruck Caretaker','Heonhwa Choe',5,544749,4,4,4);
+INSERT INTO "cards" VALUES (11,'2BB',4,'Sorin, the Mirthless','Bastien L. Deharme',2,544414,4,4,4);
+INSERT INTO "cards" VALUES (12,'L',7,'Sokenzan, Crucible of Defiance','Lucas Staniec',3,551786,3,0,0);
+INSERT INTO "cards" VALUES (13,'L',7,'Otawara, Soaring City','Alayna Danner',4,551785,3,0,0);
+INSERT INTO "cards" VALUES (14,'WUBRG',6,'Sanctum of All','Johannes Voss',6,488280,3,0,0);
+INSERT INTO "cards" VALUES (15,'GW',1,'Satsuki, the Living Lore','domco',5,552273,3,1,3);
+INSERT INTO "cards" VALUES (16,'3GGUU',1,'Koma, Cosmos Serpent','Jesper Ejsing',8,503837,4,6,6);
+INSERT INTO "cards" VALUES (17,'5BR',4,'Tibalt, Cosmic Imposter','Grzegorz Rutkowski',9,507137,4,5,5);
