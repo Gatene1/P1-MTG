@@ -15,12 +15,7 @@ let listCard = function(card) {
 function addCardButton(gotoURL) {
     window.location.href = gotoURL;
 }
-// "Artist" VARCHAR NOT NULL,
-//     "ColorIdentity" VARCHAR NOT NULL,
-//     "Multiverse" LONG NOT NULL,
-//     "Rarity" VARCHAR NOT NULL,
-//     "Power" INT NOT NULL,
-//     "Toughness" INT NOT NULL,
+
 function postCard() {
     let card = {
         "cardId": document.getElementById("cardId").value,

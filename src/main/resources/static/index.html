@@ -14,24 +14,33 @@
                 <table>
                     <form>
                         <tr>
-                            <td><img src="/icons/search.png"></td>
+                            <td><img src="http://agamedesigner.info/search.png"></td>
                             <td><input class="innerbox" type="text"></td>
                         </tr>
                     </form>
                 </table>
             </div><br><br><br>
-            <button class="glass" type="button">Random Card</button>
-            <button class="glass" type="button">All Cards</button>
+            <button class="glass" type="button" onclick="addCardButton('/randomCard')">Random Card</button>&nbsp;&nbsp;&nbsp;
+            <button class="glass" type="button" onclick="addCardButton('/allCards')">All Cards</button>&nbsp;&nbsp;&nbsp;
             <button class="glass" type="button" onclick="addCardButton('/addCard')">Add-A-Card</button>
         </div>
-        <div class="adminButtons">
-            <button class="glass" type="button">Raw Data</button><br>
-            <button class="glass" type="button">Logging</button>
-        </div>
+        <input type="name" width="100" height="100" id="yBox">
+        <input type="name" width="100" height="100" id="cBox">
+        <canvas id="adminButtons" class="adminButtons" height="200" width="200" onmouseout="CheckMenuStatus()">
+            <img id="settingsImage" src="http://agamedesigner.info/settings.png" height="44" width="44">
+            <img style="cursor:pointer" id="rawDataImage" src="http://agamedesigner.info/rawDataImage.png">
+            <img id="loggingImage" src="http://agamedesigner.info/loggingButtonImage.png">
+        </canvas>
+<!--        <div class="adminButtons" id="adminButtonsDiv">-->
+<!--            <button class="glass" type="button" onclick="addCardButton('/cards')">Raw Data</button><br><br>-->
+<!--            <button class="glass" type="button">Logging</button>-->
+<!--        </div>-->
+
         <div class="pageBottom">
 
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="addCard.js"></script>
+    <script src="anim.js"></script>
 </body>
 </html>
