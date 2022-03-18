@@ -21,6 +21,8 @@ public class ServerClass {
         server.addServlet("", "DefaultServlet2", new AllElseServlet()).addMapping(" ");
         server.addServlet("","cardServlet", new CardServlet()).addMapping("/cards");
         server.addServlet("","addCardServlet", new AddACard()).addMapping("/addCard");
+        server.addServlet("", "allCardsServlet", new AllCardsServlet()).addMapping("/allCards");
+        server.addServlet("", "randomCard", new RandomCardServlet()).addMapping("/randomCard");
 
         try {
             server.start();

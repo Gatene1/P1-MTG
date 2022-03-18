@@ -52,3 +52,14 @@ our landing page, and show a menu for the users.</li>
 in-memory cards on the addCard.html page.</li>
 <li>Uploaded an icon to my Web site that was giving us issues displaying on different computers.</li>
 </ul>
+
+```
+Thursday, March 17, 2022
+```
+<ul>
+<li>Started on some simple animation for the landing page.</li>
+<li>We added more cards to the in-memory database.</li>
+<li>Made massive changes to the CSS files, and added some</li>
+<li>Added missing HTML files.</li>
+<li>compared and adjusted our files to keep them in synch.</li>
+</ul>
