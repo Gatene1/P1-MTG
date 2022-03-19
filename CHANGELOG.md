@@ -64,3 +64,13 @@ Thursday, March 17, 2022
 <li>compared and adjusted our files to keep them in synch.</li>
 <li>Finished adding information in card list.</li>
 </ul>
+
+```
+Friday, March 18, 2022
+```
+<ul>
+<li>Made a background image for the AddCard.html page.</li>
+<li>Added slight animation to the AddCard.html page</li>
+<li>Started work on extra program to build a JSON file from the large list of JSON files we have, minus
+the fields we aren't using in our project, and having each card in one file.</li>
+</ul>

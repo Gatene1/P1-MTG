@@ -4,11 +4,17 @@ let canvasHeight = window.innerHeight * .50;
 let ctx = canvas.getContext("2d");
 
 let exCardImg = document.getElementById('exCardImg');
+let parchmentImg = document.getElementById('parchmentNote');
 let count = 0;
 
 let exCardSettle = false;
+let exCardPhase1 = false;
+let exCardPhase2 = false;
+let exCardPhase3 = false;
+let parchmentPhase1 = false;
 
 let exCardImageLeft = -15;
+let parchmentImgLeft = -220;
 
 fetch('/cards').then(resp => resp.json()).then(cards => {
     document.querySelector('#cardsDiv').innerHTML = listCards(cards);
@@ -32,12 +38,49 @@ function ColorRect (leftX, topY, boxWidth, boxHeight, fillColor) {
 
 function DrawImage() {
 
-    if (!exCardSettle) {
+    ColorRect(0,0, canvasWidth, canvasHeight, "Clear");
+    ctx.drawImage(parchmentImg, parchmentImgLeft, window.innerHeight * .1435);
+    ctx.drawImage(exCardImg, exCardImageLeft, window.innerHeight * .1);
+
+    if (!exCardSettle && !exCardPhase1 && !exCardPhase2) {
         // if Example Card hasn't settled into place on the canvas.
-        ColorRect(0,0, canvasWidth, canvasHeight, "Clear");
-        ctx.drawImage(exCardImg, exCardImageLeft, window.innerHeight * .1);
         exCardImageLeft += 15;
-        exCardSettle = exCardImageLeft >= 300;
+        if (exCardImageLeft >= 300) {
+            exCardSettle = true;
+            exCardImageLeft -= 20;
+        }
+    }
+
+    if (exCardSettle && !exCardPhase1 && !exCardPhase2) {
+        // if exCard has gone as far from left as intended, but not gone toward left yet.
+        exCardImageLeft -= 5;
+        if (exCardImageLeft <= 230) {
+            exCardPhase1 = true;
+            exCardImageLeft += 8;
+        }
+    }
+
+    if (exCardSettle && exCardPhase1 && !exCardPhase2) {
+        // If card has gone as far from the left as intended, has gone a little more toward the left, but not travelled back.
+        exCardImageLeft += 7;
+        if (exCardImageLeft >= 300)
+            exCardPhase2 = true;
+    }
+
+    if (exCardSettle && exCardPhase1 && exCardPhase2 && !exCardPhase3) {
+        // If card has finished the longer routes, and needs to settle 3 points behind
+        exCardImageLeft -= 5;
+        if (exCardImageLeft <= 280) {
+            exCardPhase3 = true;
+            parchmentImgLeft = exCardImageLeft;
+        }
+    }
+
+    if (exCardPhase3 && !parchmentPhase1) {
+        parchmentImg.style.opacity += .25;
+        parchmentImgLeft += 15;
+        if (parchmentImgLeft >= 500)
+            parchmentPhase1 = true;
     }
 }
 

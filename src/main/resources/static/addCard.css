@@ -1,6 +1,8 @@
 body { background-image:url("addACardWallpaper2.jpg"); background-repeat:no-repeat; background-size:cover;}
 
 img.logo { display:block; margin:auto; }
+img#exCardImg { z-index:101; }
+img#parchmentNote { opacity:0.1; z-index:1; }
 
 div.pageBottom { background-color:#000000; position:absolute; height:300px; width:100%; bottom:-300px; left:0px;}
 
