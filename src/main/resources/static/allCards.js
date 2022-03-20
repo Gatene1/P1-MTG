@@ -11,6 +11,6 @@ function listCards(json) {
 }
 // lists the cards in the database to the screen by using the cards unique multiverse id in the url. Prints imagine of the card.
 let listCard = function(card) {
-    return '<img src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid='+card.multiverse+'&type=card">'
+    return '<a href="/viewCard.html?scryfallId='+card.scryfallId+'"><img src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid='+card.multiverse+'&type=card"></a>';
 }
 document.body.style.backgroundImage = "linear-gradient(#090930,#000000)";

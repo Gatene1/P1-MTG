@@ -30,8 +30,7 @@ public class CardServlet extends HttpServlet {
             while (rs.next()) {
                 cards.add(new Card(rs.getInt("CardId"), rs.getString("ManaCost"), rs.getString("TypeId"),
                         rs.getString("Name"), rs.getString("Artist"), rs.getString("ColorIdentity"),
-                        rs.getLong("Multiverse"), rs.getString("Rarity"), rs.getInt("Power"),
-                        rs.getInt("Toughness")));
+                        rs.getLong("Multiverse"), rs.getString("Rarity"), rs.getString("scryfallId")));
             }
         } catch (SQLException e) {
             System.err.println("Failed to retrieve form DB: " + e.getMessage());
@@ -48,7 +47,7 @@ public class CardServlet extends HttpServlet {
         ObjectMapper mapper = new ObjectMapper();
         Card newCard = mapper.readValue(req.getInputStream(), Card.class);
         try {
-            PreparedStatement stmt = conn.prepareStatement("insert into 'cards' values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            PreparedStatement stmt = conn.prepareStatement("insert into 'cards' values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
             stmt.setInt(1, newCard.getCardId());
             stmt.setString(2, newCard.getCost());
             stmt.setString(3, newCard.getTypeId());
@@ -57,8 +56,7 @@ public class CardServlet extends HttpServlet {
             stmt.setString(6, newCard.getColorIdentity());
             stmt.setLong(7, newCard.getMultiverse());
             stmt.setString(8, newCard.getRarity());
-            stmt.setInt(9, newCard.getPower());
-            stmt.setInt(10, newCard.getToughness());
+            stmt.setString(9, newCard.getScryfallId());
 
             stmt.executeUpdate();
             stmt.close();

@@ -199,3 +199,6 @@ function imageReset() {
         showingSettings = true;
     }
  }
+function addCardButton(gotoURL) {
+    window.location.href = gotoURL;
+}

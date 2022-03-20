@@ -9,11 +9,10 @@ public class Card {
     private String colorIdentity;
     private long multiverse;
     private String rarity;
-    private int power;
-    private int toughness;
+    private String scryfallId;
 
     public Card(int cardId, String cost, String typeId, String name, String artist, String colorIdentity, long multiverse,
-                String rarity, int power, int toughness) {
+                String rarity, String scryfallId) {
         this.cardId = cardId;
         this.cost = cost;
         this.typeId = typeId;
@@ -22,8 +21,7 @@ public class Card {
         this.colorIdentity = colorIdentity;
         this.multiverse = multiverse;
         this.rarity = rarity;
-        this.power = power;
-        this.toughness = toughness;
+        this.scryfallId = scryfallId;
     }
 
     public Card() {
@@ -41,8 +39,7 @@ public class Card {
                 ", colorIdentity='" + colorIdentity + '\'' +
                 ", multiverse='" + multiverse + '\'' +
                 ", rarity='" + rarity + '\'' +
-                ", power='" + power + '\'' +
-                ", toughness='" + toughness + '\'' +
+                ", scryfallId='" + scryfallId + '\'' +
                 "}";
     }
 
@@ -62,8 +59,6 @@ public class Card {
     public void setMultiverse(long multiverse) { this.multiverse = multiverse; }
     public String getRarity() { return rarity; }
     public void setRarity(String rarity) { this.rarity = rarity; }
-    public int getPower() { return power; }
-    public void setPower(int power) { this.power = power; }
-    public int getToughness() { return toughness; }
-    public void setToughness(int toughness) { this.toughness = toughness; }
+    public String getScryfallId() { return scryfallId; }
+    public void setScryfallId(String scryfallId) { this.scryfallId = scryfallId; }
 }
