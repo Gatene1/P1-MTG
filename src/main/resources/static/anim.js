@@ -202,3 +202,7 @@ function imageReset() {
 function addCardButton(gotoURL) {
     window.location.href = gotoURL;
 }
+
+function goToButton(goToUrl) {
+    window.location.href=goToUrl;
+}

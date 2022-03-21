@@ -123,3 +123,7 @@ function postCard() {
     );
     window.document.location.reload();
 }
+
+function goToButton(goToUrl) {
+    window.location.href=goToUrl;
+}

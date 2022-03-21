@@ -1,16 +1,45 @@
 body {
     padding:0; margin:0;
     overflow-x: hidden;
+    background-image:linear-gradient(#5979a0,#7fa1ba);
 }
 
 div.outerContents {
     display:block;
     width:100vw;
     height:100vh;
-    background-image:linear-gradient(#5979a0,#7fa1ba);
     margin: auto;
 }
 
-div.cardsToShow { display:block; margin:auto; width:1300px; overflow-y:scroll; text-align:center;}
+div.cardsToShow { display:block; margin:auto; width:1300px; overflow-y:scroll; text-align:center; overflow-x:hidden; height:900px;}
 
 img.logo { display:block; margin:auto; }
+
+div.pageBottom { background-color:#090930; position:absolute; height:300px; width:100%; bottom:-300px; left:0px;}
+
+.gitGlass{
+    background: linear-gradient(135deg,rgba(255,255,255,0.3),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px; border: 5px solid rgba(255, 255, 255, .3);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+button#purpButtonT {
+    background-color: #1a035b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 8%;
+    top: 30%;
+    left: 40%;
+    position: absolute;
+    /*border-radius:48% 52% 52% 48% / 0 0 100% 100%;*/
+    box-shadow: 0 0 89.1px rgba(0, 0, 0, -0.07),
+    0 0 81.4px rgba(0, 0, 0, -0.087),
+    0 0 70.1px rgba(0, 0, 0, 0.136),
+    0 0 58px rgba(0, 0, 0, 0.4);
+}
+button#purpButtonD {background-color: #14063d;color: white;padding: 14px 20px;margin: 8px 0;cursor: pointer;width: 8%;top: 30%;left: 50%;position: absolute;
+    /*border-radius:48% 52% 52% 48% / 0 0 100% 100%;*/box-shadow: 0 0 89.1px rgba(0, 0, 0, -0.07), 0 0 81.4px rgba(0, 0, 0, -0.087), 0 0 70.1px rgba(0, 0, 0, 0.136), 0 0 58px rgba(0, 0, 0, 0.4);
+}

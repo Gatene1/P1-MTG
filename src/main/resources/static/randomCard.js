@@ -17,3 +17,7 @@ let listCard = function() {
     return '<a href="/viewCard.html?scryfallId='+multiverseId+'"><img class="imageShadow" src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid='+multiverseId+'&type=card"></a>'
     // return '<img src="https://scryfall.com/card/unf/"'+multiverseId+'>'
 }
+
+function goToButton(goToUrl) {
+    window.location.href=goToUrl;
+}

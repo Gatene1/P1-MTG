@@ -46,9 +46,16 @@ public class SearchService extends HttpServlet {
         try {
             ResultSet rs = conn.prepareStatement("select * from cards ").executeQuery();
             while (rs.next()) {
-                Card cardToAdd = new Card(rs.getInt("CardId"), rs.getString("ManaCost"), rs.getString("TypeId"),
-                        rs.getString("Name"), rs.getString("Artist"), rs.getString("ColorIdentity"),
-                        rs.getLong("Multiverse"), rs.getString("Rarity"), rs.getString("ScryfallId"));
+                Card cardToAdd = new Card(
+                        rs.getInt("CardId"),
+                        rs.getInt("TypeId"),
+                        rs.getString("ManaCost"),
+                        rs.getString("Name"),
+                        rs.getString("Artist"),
+                        rs.getString("ColorIdentity"),
+                        rs.getLong("Multiverse"),
+                        rs.getString("Rarity"),
+                        rs.getString("ScryfallId"));
 
                 cards.add(cardToAdd);
             }
@@ -82,6 +89,15 @@ public class SearchService extends HttpServlet {
 
         resp.getWriter().println("</div>" +
                 "</div>" +
+                "<div class=\"pageBottom\">\n" +
+                "        <button id=\"purpButtonT\" class=\"gitGlass\" onclick=\"goToButton('https://github.com/TannerHartt')\">Tanner's Github</button><br><br><br>\n" +
+                "        <button id=\"purpButtonD\" class=\"gitGlass\" onclick=\"goToButton('https://github.com/Gatene1')\">David's Github</button>\n" +
+                "    </div>" +
+                "<script>" +
+                "function goToButton(goToUrl) {" +
+                "    window.location.href=goToUrl;" +
+                "}" +
+                "</script>" +
                 "</body>" +
                 "</html>");
 

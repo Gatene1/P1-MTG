@@ -21,9 +21,11 @@ public class ServerClass {
         server.addServlet("", "DefaultServlet2", new AllElseServlet()).addMapping(" ");
         server.addServlet("","cardServlet", new CardServlet()).addMapping("/cards");
         server.addServlet("","addCardServlet", new AddACard()).addMapping("/addCard");
+        server.addServlet("", "AddTheCard", new AddTheCard()).addMapping("/addInto");
         server.addServlet("", "allCardsServlet", new AllCardsServlet()).addMapping("/allCards");
         server.addServlet("", "randomCard", new RandomCardServlet()).addMapping("/randomCard");
         server.addServlet("","searchResults", new SearchService()).addMapping("/search");
+
 
         try {
             server.start();

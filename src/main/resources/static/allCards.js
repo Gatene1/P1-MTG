@@ -13,3 +13,7 @@ function listCards(json) {
 let listCard = function(card) {
     return '<a href="/viewCard.html?scryfallId='+card.scryfallId+'"><img src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid='+card.multiverse+'&type=card"></a>';
 }
+
+function goToButton(goToUrl) {
+    window.location.href=goToUrl;
+}

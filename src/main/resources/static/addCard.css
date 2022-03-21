@@ -122,9 +122,22 @@ textarea.cardDescription { width:470px; height:150px; text-align: left;}
     font-family: MagicFont, sans-serif;
 }
 
-.mana-icon { font-size: 1.4em; background: #ADD3AC; border-radius: 50%; box-sizing: border-box; box-shadow: -0.05em 0.12em 0px 0 black; margin-right: 5px;
+.mana-iconGreen { font-size: 1.4em; background: #ADD3AC; border-radius: 50%; box-sizing: border-box; box-shadow: -0.05em 0.12em 0px 0 black; margin-right: 5px;
                 height: 20px; align-self: center;
 }
+.mana-iconBlue { font-size: 1.4em; background: #9bc5ef; border-radius: 50%; box-sizing: border-box; box-shadow: -0.05em 0.12em 0px 0 black; margin-right: 5px;
+    height: 20px; align-self: center;
+}
+.mana-iconBlack { font-size: 1.4em; background: #e1d5d9; border-radius: 50%; box-sizing: border-box; box-shadow: -0.05em 0.12em 0px 0 black; margin-right: 5px;
+    height: 20px; align-self: center;
+}
+.mana-iconRed { font-size: 1.4em; background: #f8ac95; border-radius: 50%; box-sizing: border-box; box-shadow: -0.05em 0.12em 0px 0 black; margin-right: 5px;
+    height: 20px; align-self: center;
+}
+.mana-iconWhite { font-size: 1.4em; background: #fffff1; border-radius: 50%; box-sizing: border-box; box-shadow: -0.05em 0.12em 0px 0 black; margin-right: 5px;
+    height: 20px; align-self: center;
+}
+
 
 .frame-art {
     height: 100%; /* make it fit in the card */
@@ -209,4 +222,31 @@ p {
     background-image: url(green-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.gitGlass{
+    background: linear-gradient(135deg,rgba(255,255,255,0.3),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px; border: 5px solid rgba(255, 255, 255, .3);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+button#purpButtonT {
+    background-color: #1a035b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 8%;
+    top: 30%;
+    left: 40%;
+    position: absolute;
+    /*border-radius:48% 52% 52% 48% / 0 0 100% 100%;*/
+    box-shadow: 0 0 89.1px rgba(0, 0, 0, -0.07),
+    0 0 81.4px rgba(0, 0, 0, -0.087),
+    0 0 70.1px rgba(0, 0, 0, 0.136),
+    0 0 58px rgba(0, 0, 0, 0.4);
+}
+button#purpButtonD {background-color: #14063d;color: white;padding: 14px 20px;margin: 8px 0;cursor: pointer;width: 8%;top: 30%;left: 50%;position: absolute;
+    /*border-radius:48% 52% 52% 48% / 0 0 100% 100%;*/box-shadow: 0 0 89.1px rgba(0, 0, 0, -0.07), 0 0 81.4px rgba(0, 0, 0, -0.087), 0 0 70.1px rgba(0, 0, 0, 0.136), 0 0 58px rgba(0, 0, 0, 0.4);
 }

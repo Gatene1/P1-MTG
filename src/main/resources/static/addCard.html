@@ -19,7 +19,13 @@
 
                     <div class="frame-header">
                         <h1 class="name" id="name">Oath of Nissa</h1>
-                        <img id="mana2" class="mana-icon" src="g.png">
+                        <div>
+                            <img id="mana1" class="" src="">
+                            <img id="mana2" class="" src="">
+                            <img id="mana3" class="" src="">
+                            <img id="mana4" class="" src="">
+                            <img id="mana5" class="mana-iconGreen" src="g.png">
+                        </div>
                     </div>
 
                     <img class="frame-art" src="nissa.jpg" title="Nissa Art">
@@ -58,7 +64,7 @@ You may spend mana as though it were mana of any color to cast<br>planeswalker s
         <div class="formForCard">
             <form>
                 <label for="cardName">Name: </label><input type="name" name="cardName" id="cardName" onchange="ChangeNameOnCard()"><br>
-                <label for="cardManaCost">Mana Cost: </label><input type="name" name="cardManaCost" id="cardManaCost" maxlength="5"><br><br>
+                <label for="cardManaCost">Mana Cost: </label><input type="name" name="cardManaCost" id="cardManaCost" maxlength="5" onchange="ChangeManaPool()"><br><br>
                 <label>Card Color: </label>
                     <select id="cardBgDiv" onchange="ChangeColor()">
                         <option value="Red">Red</option>
@@ -73,7 +79,10 @@ You may spend mana as though it were mana of any color to cast<br>planeswalker s
             </form>
         </div>
     </div><!-- Contents //-->
-<div class="pageBottom"></div>
+<div class="pageBottom">
+    <button id="purpButtonT" class="gitGlass" onclick="goToButton('https://github.com/TannerHartt')">Tanner's Github</button><br><br><br>
+    <button id="purpButtonD" class="gitGlass" onclick="goToButton('https://github.com/Gatene1')">David's Github</button>
+</div>
 <script src="addCard.js"></script>
 </body>
 </html>
