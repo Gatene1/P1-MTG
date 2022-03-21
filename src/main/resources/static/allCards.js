@@ -13,4 +13,3 @@ function listCards(json) {
 let listCard = function(card) {
     return '<a href="/viewCard.html?scryfallId='+card.scryfallId+'"><img src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid='+card.multiverse+'&type=card"></a>';
 }
-document.body.style.backgroundImage = "linear-gradient(#090930,#000000)";

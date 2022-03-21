@@ -17,12 +17,14 @@ div.outerbox { width:400px; height: 40px; text-align: left; border-color:#5979a0
     margin:auto; padding-left: 10px; padding-bottom:10px;
     background-color:#294970; border-radius:40px;}
 div.bgDiv {width:1000px; height:1024px; margin:auto; background-image:url("MTGWallpaper.png"); opacity:0.53;}
+div#cardsDivIndex { width:1300px; height:100px; margin:auto; }
 
 
 canvas.adminButtons { position:absolute; bottom:5px; left:5px; }
 
 input.innerbox { border:none; width:420px; height:40px; /*color:#7fa1ba;*/ color:#294970;
     /*background-color:#294970*/ background-color:rgba(255, 255, 255, 0); font-weight:bold; font-size:24pt;}
+#submitButton { height:35px; width:100px; }
 
 .innerbox:focus { outline:none; }
 
@@ -40,6 +42,8 @@ div.glass { margin:auto; }
 
 td.rj { text-align: right; }
 td.center { display:table-cell; text-align:center; }
+
+tr.searchRow { vertical-align: middle; }
 
 img#settingsImage { cursor:pointer; }
 

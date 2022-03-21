@@ -12,7 +12,7 @@ let exCardPhase2 = false;
 let exCardPhase3 = false;
 
 let exCardImageLeft = -30;
-let exCardImageHeight = 0;
+let exCardImageHeight = -3;
 
 let urlString = window.location.href;
 let cardString = urlString.split('=')[1];

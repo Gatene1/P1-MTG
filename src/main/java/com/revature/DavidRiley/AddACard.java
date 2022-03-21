@@ -15,7 +15,7 @@ public class AddACard extends HttpServlet {
 
     @Override
     protected void doGet (HttpServletRequest req, HttpServletResponse resp) {
-        InputStream fileName = getClass().getClassLoader().getResourceAsStream("static/viewCard.html");
+        InputStream fileName = getClass().getClassLoader().getResourceAsStream("static/addCard.html");
 
         try {
             IOUtils.copy(fileName,resp.getOutputStream());

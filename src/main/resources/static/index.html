@@ -8,24 +8,32 @@
 </head>
 <body>
     <div class="outerContents">
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Magicthegathering-logo.svg/512px-Magicthegathering-logo.svg.png?20160501122627%3E">
+        <a href="index.html"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Magicthegathering-logo.svg/512px-Magicthegathering-logo.svg.png?20160501122627%3E%27%3E"></a>
+
+        <form action="/search" method="get">
         <div class="midContents">
+            <table>
+                <tr class="searchRow">
+                    <td>
             <div class="glass">
                 <table>
-                    <form>
                         <tr>
                             <td><img src="http://agamedesigner.info/search.png"></td>
-                            <td><input class="innerbox" type="text"></td>
+                            <td><input id="query" name="query" class="innerbox" type="text"></td>
                         </tr>
-                    </form>
                 </table>
-            </div><br><br><br>
+            </div>
+                    </td>
+                    <td>
+                        &nbsp;&nbsp;&nbsp;<input class="glass" id="submitButton" type="submit" value="Search"><br><br><br>
+                    </td>
+                </tr>
+            </table><br>
             <button class="glass" type="button" onclick="addCardButton('/randomCard')">Random Card</button>&nbsp;&nbsp;&nbsp;
             <button class="glass" type="button" onclick="addCardButton('/allCards')">All Cards</button>&nbsp;&nbsp;&nbsp;
             <button class="glass" type="button" onclick="addCardButton('/addCard')">Add-A-Card</button>
         </div>
-        <input type="name" width="100" height="100" id="yBox">
-        <input type="name" width="100" height="100" id="cBox">
+        </form>
         <canvas id="adminButtons" class="adminButtons" height="200" width="200" onmouseout="CheckMenuStatus()">
             <img id="settingsImage" src="http://agamedesigner.info/settings.png" height="44" width="44">
             <img style="cursor:pointer" id="rawDataImage" src="http://agamedesigner.info/rawDataImage.png">
