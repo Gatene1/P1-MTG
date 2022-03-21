@@ -74,3 +74,31 @@ Friday, March 18, 2022
 <li>Started work on extra program to build a JSON file from the large list of JSON files we have, minus
 the fields we aren't using in our project, and having each card in one file.</li>
 </ul>
+
+```
+Saturday, March 19, 2022
+```
+<ul>
+<li>Finished the random card generator.</li>
+<li>Continued to add more cards to the in-memory database</li>
+<li>Continued with the work on AddCard.html</li>
+</ul>
+
+```
+Sunday, March 20, 2022
+```
+<ul>
+<li>Completed the search functionality.</li>
+<li>Completed Github links for the bottoms of the pages.</li>
+<li>Added more cards to in-memory database.</li>
+<li>Completed most of the AddCard function.</li>
+</ul>
+
+```
+Monday, March 21, 2022
+```
+<ul>
+<li>Worked mainly on more of the AddACard.html.</li>
+<li>Started and finished the servlet to print out all cards, including
+the ones added in AddACard.html to a table.</li>
+</ul>

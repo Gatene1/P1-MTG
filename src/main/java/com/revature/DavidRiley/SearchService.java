@@ -21,6 +21,17 @@ public class SearchService extends HttpServlet {
 
     }
 
+    /**
+     * This override method reads what the user types into the search bar and stores it as searchName with an '=' at the end and a '+' representing a space.
+     * It then takes that value and removes the '=' and replaces the '+' with a space.
+     * Then using a prepare statement to return the contents of the database and saves it to a String array.
+     * Once the array is filled, using a for each loop it searches the array for all cards that contain the searchName in its name and
+     * displays them to the web page with a href tag to display the card image.
+     * Using the .toLowerCase and .contains it makes the search bar non-case sensitive and dynamic for incorrect inputs.
+     * @param req
+     * @param resp
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String searchName = req.getQueryString();
@@ -100,6 +111,7 @@ public class SearchService extends HttpServlet {
                 "</script>" +
                 "</body>" +
                 "</html>");
+
 
     }
 }

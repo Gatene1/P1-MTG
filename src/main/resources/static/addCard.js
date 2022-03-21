@@ -14,6 +14,9 @@ let manaOnCard2 = document.getElementById("mana2");
 let manaOnCard3 = document.getElementById("mana3");
 let manaOnCard4 = document.getElementById("mana4");
 let manaOnCard5 = document.getElementById("mana5");
+let cardAddTextArea = document.getElementById('cardAddStartDiv');
+let cardTypeTranslated;
+let colorIdentityTranslated = 0;
 
 
 let blueMana = '9bc5ef';
@@ -45,6 +48,10 @@ window.onload = function() {
             cardBgInDiv.value = "4";
             break;
     }
+}
+
+function submitCard() {
+    alert(cardCount.value);
 }
 
 function ChangeNameOnCard() {
@@ -297,6 +304,77 @@ function ChangeMana5(){
             manaOnCard1.src="w.png";
             break;
     }
+}
+
+function postCreation() {
+
+
+
+    switch(cardTypeInDiv.value) {
+        case "White":
+            colorIdentityTranslated = 1;
+            break;
+        case "Black":
+            colorIdentityTranslated = 2;
+            break;
+        case "Red":
+            colorIdentityTranslated = 3;
+            break;
+        case "Blue":
+            colorIdentityTranslated = 4;
+            break;
+        case "Green":
+            colorIdentityTranslated = 5;
+            break;
+    }
+
+    if (cardTypeInDiv.value.toString().includes("Creature")) cardTypeTranslated = 1;
+    if (cardTypeInDiv.value.toString().includes("Artifact")) cardTypeTranslated = 2;
+    if (cardTypeInDiv.value.toString().includes("Instant")) cardTypeTranslated = 3;
+    if (cardTypeInDiv.value.toString().includes("Planeswalker")) cardTypeTranslated = 4;
+    if (cardTypeInDiv.value.toString().includes("Sorcery")) cardTypeTranslated = 5;
+    if (cardTypeInDiv.value.toString().includes("Enchantment")) cardTypeTranslated = 6;
+    if (cardTypeInDiv.value.toString().includes("Land")) cardTypeTranslated = 7;
+
+    fetch('/cards').then(resp => resp.json()).then(cards => {
+        document.querySelector('#cardAddStartText').innerHTML = ListCards(cards);
+    });
+
+    let ListCards = function(card) {
+        return '<p>' + card.cardId + ": " + card.name + '</p>';
+    }
+
+// These fields come from the Class' class variables.
+    let cardToAdd = {
+        "cardId": 97,
+        "typeId": cardTypeTranslated,
+        "cost": manaCostInDiv.value,
+        "name": nameBoxInDiv.value,
+        "artist": "Add-A-Card",
+        "colorIdentity": colorIdentityTranslated,
+        "multiverse": 0,
+        "rarity": 4,
+        "scryfallId": "0"
+
+    };
+    fetch("/cards", {
+        method:"POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cardToAdd)
+    }).then((result) => {
+        if (result.status != 200) {
+            throw new Error("Bad Server Response.");
+        }
+    }).catch((error) => { console.log(error); })
+    fetch('/cards').then(resp => resp.json()).then(cards => {
+        document.querySelector('#cardAddStartText').innerHTML = ListCards(cards);
+    });
+
+    //window.document.location.reload();
+
 }
 
 

@@ -6,12 +6,12 @@ div.pageBottom { background-color:#000000; position:absolute; height:300px; widt
 div.formForCard { position:absolute; right:1%; top:23%; height:650px; width:500px; background-color:black; font-weight:bold; font-family:sans-serif; color:white;
                     font-size: 12pt; padding-top:35px;}
 
+
 textarea.cardDescription { width:470px; height:150px; text-align: left;}
 
-@font-face {
-    font-family: 'MagicFont';
-    src: url('MAGIC.TTF') format('truetype');
-}
+@font-face { font-family: 'MagicFont'; src: url('MAGIC.TTF') format('truetype'); }
+
+button#cardSubmitButton { width:200px; height:25px; }
 
 .card-container {
     border: 1px solid black;

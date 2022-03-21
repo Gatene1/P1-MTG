@@ -11,6 +11,7 @@ public class Card {
     private String rarity;
     private String scryfallId;
 
+
     public Card(int cardId, int typeId, String cost, String name, String artist, String colorIdentity, long multiverse, String rarity, String scryfallId) {
         this.cardId = cardId;
         this.typeId = typeId;

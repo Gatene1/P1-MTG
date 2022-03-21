@@ -10,8 +10,7 @@
 <body>
 <a href="index.html"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Magicthegathering-logo.svg/512px-Magicthegathering-logo.svg.png?20160501122627%3E%27%3E"></a>
     <div class="contents">
-
-        <div class="card-container">
+        <div class="card-container" id="card-container">
 
             <div class="card-background" id="cardBg">
 
@@ -74,15 +73,20 @@ You may spend mana as though it were mana of any color to cast<br>planeswalker s
                         <option value="White">White</option>
                     </select><br><br><br><br><br><br><br>
                 <label for="cardImage">Card Image: </label><input type="name" name="cardImage" id="cardImage"><br><br><br><br><br><br><br><br><br><br>
-                <label for="cardType">Card Type: </label><input type="name" name="cardType" id="cardType" onchange="ChangeCardType()"><br><br><br><br>
-                <label for="cardDescription">Flavor Text: </label><br><textarea class="cardDescription" name="cardDescription" id="cardDescription" onchange="ChangeFlavorText()"></textarea>
+                <label for="cardType">Card Type: </label><input type="name" name="cardType" id="cardType" onchange="ChangeCardType()"><br><br><br>
+                <label for="cardDescription">Flavor Text: </label><br><textarea class="cardDescription" name="cardDescription" id="cardDescription" onchange="ChangeFlavorText()"></textarea><br><br>
+                <button type="button" id="cardSubmitButton" onclick="postCreation()">Submit Card</button>
             </form>
         </div>
+
+
     </div><!-- Contents //-->
+
 <div class="pageBottom">
     <button id="purpButtonT" class="gitGlass" onclick="goToButton('https://github.com/TannerHartt')">Tanner's Github</button><br><br><br>
     <button id="purpButtonD" class="gitGlass" onclick="goToButton('https://github.com/Gatene1')">David's Github</button>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
 <script src="addCard.js"></script>
 </body>
 </html>

@@ -22,6 +22,15 @@ public class CardServlet extends HttpServlet {
         }
     }
 
+    /**
+     * Servlet set up to display the contents of the database to the server. Prints and sets content type as raw JSON data.
+     * @param req http request sent from the server.
+     * @param resp printing/sending the response to the server to display on the webpage.
+     * @throws IOException if this error occurs, it throws it back to the method that called it.
+     * @param req
+     * @param resp
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         List<Card> cards = new ArrayList<>();
@@ -50,7 +59,15 @@ public class CardServlet extends HttpServlet {
         resp.getWriter().println(results);
     }
 
-
+    /**
+     * Servlet set up to display the contents of the database to the server. Prints and sets content type as raw JSON data.
+     * @param req http request sent from the server.
+     * @param resp printing/sending the response to the server to display on the webpage.
+     * @throws IOException if this error occurs, it throws it back to the method that called it.
+     * @param req
+     * @param resp
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
@@ -71,5 +88,6 @@ public class CardServlet extends HttpServlet {
         } catch (SQLException e) {
             System.err.println("Failed to insert: " + e.getMessage());
         }
+
     }
 }
