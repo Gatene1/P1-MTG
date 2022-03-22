@@ -10,6 +10,7 @@
 <body>
 <a href="index.html"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Magicthegathering-logo.svg/512px-Magicthegathering-logo.svg.png?20160501122627%3E%27%3E"></a>
     <div class="contents">
+        <button id="purpButton" class="glass" onclick="goToButton('/viewCard.html')">See Changes</button>
         <div class="card-container" id="card-container">
 
             <div class="card-background" id="cardBg">
@@ -27,7 +28,7 @@
                         </div>
                     </div>
 
-                    <img class="frame-art" src="nissa.jpg" title="Nissa Art">
+                    <img class="frame-art" id="frame-art" src="nissa.jpg" title="Nissa Art">
 
                     <div class="frame-type-line">
                         <h1 class="type" id="typeOfCard">Legendary Enchantment</h1>
@@ -71,8 +72,19 @@ You may spend mana as though it were mana of any color to cast<br>planeswalker s
                         <option value="Blue">Blue</option>
                         <option value="Green">Green</option>
                         <option value="White">White</option>
-                    </select><br><br><br><br><br><br><br>
-                <label for="cardImage">Card Image: </label><input type="name" name="cardImage" id="cardImage"><br><br><br><br><br><br><br><br><br><br>
+                    </select><br><br><br>
+                <label for="cardImage">Card Image: </label><input type="name" name="cardImage" id="cardImage"><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="imageCreationDiv">
+                    <table>
+                        <tr class="artImg">
+                            <td><img class="imageCell" id="arrowLeft" src="arrowLeft.png" onclick="PrevImage()"></td>
+                            <td><center><img class="imageForCreation" id="imageForCreation" src="nissa.jpg"></center></td>
+                            <td><img class="imageCell" id="arrowRight" src="arrowRight.png" onclick="NextImage()"></td>
+                        </tr>
+                    </table>
+                </div>
+
                 <label for="cardType">Card Type: </label><input type="name" name="cardType" id="cardType" onchange="ChangeCardType()"><br><br><br>
                 <label for="cardDescription">Flavor Text: </label><br><textarea class="cardDescription" name="cardDescription" id="cardDescription" onchange="ChangeFlavorText()"></textarea><br><br>
                 <button type="button" id="cardSubmitButton" onclick="postCreation()">Submit Card</button>

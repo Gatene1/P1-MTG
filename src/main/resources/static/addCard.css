@@ -1,11 +1,19 @@
 body { background-image:url("addACardWallpaper2.jpg"); background-repeat:no-repeat; background-size:cover;}
 
 img.logo { display:block; margin:auto; }
+img.imageForCreation { display:table-cell; width:60%; height:60%; margin:0%; }
+img.imageCell { display:table-cell; cursor:pointer; overflow:hidden; }
 
 div.pageBottom { background-color:#000000; position:absolute; height:300px; width:100%; bottom:-300px; left:0px;}
-div.formForCard { position:absolute; right:1%; top:23%; height:650px; width:500px; background-color:black; font-weight:bold; font-family:sans-serif; color:white;
+div.formForCard { position:absolute; right:1%; top:23%; height:650px; width:500px; font-weight:bold; font-family:sans-serif; color:white;
                     font-size: 12pt; padding-top:35px;}
+div.imageCreationDiv { display:table; vertical-align: middle; width:400px; height:200px; padding:0px;}
 
+td.arrowImg { width:27px; }
+
+tr.artImg { display: table-row; vertical-align: middle; align-content: center; }
+
+table { width:fit-content; padding:0px; spacing:0px; }
 
 textarea.cardDescription { width:470px; height:150px; text-align: left;}
 
@@ -247,6 +255,30 @@ button#purpButtonT {
     0 0 70.1px rgba(0, 0, 0, 0.136),
     0 0 58px rgba(0, 0, 0, 0.4);
 }
-button#purpButtonD {background-color: #14063d;color: white;padding: 14px 20px;margin: 8px 0;cursor: pointer;width: 8%;top: 30%;left: 50%;position: absolute;
+.button#purpButtonD {background-color: #14063d;color: white;padding: 14px 20px;margin: 8px 0;cursor: pointer;width: 8%;top: 30%;left: 50%;position: absolute;
     /*border-radius:48% 52% 52% 48% / 0 0 100% 100%;*/box-shadow: 0 0 89.1px rgba(0, 0, 0, -0.07), 0 0 81.4px rgba(0, 0, 0, -0.087), 0 0 70.1px rgba(0, 0, 0, 0.136), 0 0 58px rgba(0, 0, 0, 0.4);
+}
+
+.glass{
+    background: linear-gradient(135deg,rgba(255,255,255,0.3),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px; border: 5px solid rgba(255, 255, 255, .3);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+button#purpButton {
+    background-color: #1a035b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 8%;
+    top: 35%;
+    left: 19%;
+    position: absolute;
+    /*border-radius:48% 52% 52% 48% / 0 0 100% 100%;*/
+    box-shadow: 0 0 89.1px rgba(0, 0, 0, -0.07),
+    0 0 81.4px rgba(0, 0, 0, -0.087),
+    0 0 70.1px rgba(0, 0, 0, 0.136),
+    0 0 58px rgba(0, 0, 0, 0.4);
 }

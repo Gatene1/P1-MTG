@@ -17,6 +17,11 @@ let manaOnCard5 = document.getElementById("mana5");
 let cardAddTextArea = document.getElementById('cardAddStartDiv');
 let cardTypeTranslated;
 let colorIdentityTranslated = 0;
+let frameArt = document.getElementById("frame-art");
+let frameArtSm = document.getElementById("imageForCreation");
+let arrowLeft = document.getElementById("arrowLeft");
+let arrowRight = document.getElementById("arrowRight");
+let cardImageText = document.getElementById("cardImage");
 
 
 let blueMana = '9bc5ef';
@@ -29,6 +34,8 @@ window.onload = function() {
     flavorTextInDiv.value = flavorTextOnCard.innerHTML;
     cardTypeInDiv.value = cardTypeOnCard.innerHTML;
     nameBoxInDiv.value = nameBoxOnCard.innerHTML;
+
+    manaCostInDiv.value = "G";
 
     switch(splitBackgroundImage) {
         case "red-background.jpg":
@@ -48,6 +55,9 @@ window.onload = function() {
             cardBgInDiv.value = "4";
             break;
     }
+
+    cardImageText.value = frameArtSm.src.split("0/")[1];
+
 }
 
 function submitCard() {
@@ -141,7 +151,6 @@ function ChangeManaPool() {
 }
 
 function ChangeMana1(){
-    alert(manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length - 1));
     switch (manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length - 1)) {
         case "U":
             manaOnCard5.setAttribute("class","mana-iconBlue");
@@ -206,7 +215,6 @@ function ChangeMana1(){
     }
 }
 function ChangeMana2(){
-    alert(manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length-2).substring(0,1));
     switch (manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length-2).substring(0,1)) {
         case "U":
             manaOnCard4.setAttribute("class","mana-iconBlue");
@@ -231,7 +239,6 @@ function ChangeMana2(){
     }
 }
 function ChangeMana3(){
-    alert(manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length-3).substring(0,1));
     switch (manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length-3).substring(0,1)) {
         case "U":
             manaOnCard3.setAttribute("class","mana-iconBlue");
@@ -256,7 +263,6 @@ function ChangeMana3(){
     }
 }
 function ChangeMana4(){
-    alert(manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length-4).substring(0,1));
     switch (manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length-4).substring(0,1)) {
         case "U":
             manaOnCard2.setAttribute("class","mana-iconBlue");
@@ -281,7 +287,6 @@ function ChangeMana4(){
     }
 }
 function ChangeMana5(){
-    alert(manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length-5).substring(0,1));
     switch (manaCostInDiv.value.toString().substring(manaCostInDiv.value.toString().length-5).substring(0,1)) {
         case "U":
             manaOnCard1.setAttribute("class","mana-iconBlue");
@@ -375,6 +380,138 @@ function postCreation() {
 
     //window.document.location.reload();
 
+}
+
+function PrevImage() {
+    switch (frameArtSm.src.split("0/")[1]) {
+        case "nissa.jpg":
+            frameArt.src="cardart11.jpg";
+            frameArtSm.src="cardart11.jpg";
+            cardImageText.value="cardart11.jpg";
+            break;
+        case "cardart11.jpg":
+            frameArt.src="cardart10.jpg";
+            frameArtSm.src="cardart10.jpg";
+            cardImageText.value="cardart10.jpg";
+            break;
+        case "cardart10.jpg":
+            frameArt.src="cardart9.jpg";
+            frameArtSm.src="cardart9.jpg";
+            cardImageText.value="cardart9.jpg";
+            break;
+        case "cardart9.jpg":
+            frameArt.src="cardart8.jpg";
+            frameArtSm.src="cardart8.jpg";
+            cardImageText.value="cardart8.jpg";
+            break;
+        case "cardart8.jpg":
+            frameArt.src="cardart7.jpg";
+            frameArtSm.src="cardart7.jpg";
+            cardImageText.value="cardart7.jpg";
+            break;
+        case "cardart7.jpg":
+            frameArt.src="cardart6.jpg";
+            frameArtSm.src="cardart6.jpg";
+            cardImageText.value="cardart6.jpg";
+            break;
+        case "cardart6.jpg":
+            frameArt.src="cardart5.jpg";
+            frameArtSm.src="cardart5.jpg";
+            cardImageText.value="cardart5.jpg";
+            break;
+        case "cardart5.jpg":
+            frameArt.src="cardart4.jpg";
+            frameArtSm.src="cardart4.jpg";
+            cardImageText.value="cardart4.jpg";
+            break;
+        case "cardart4.jpg":
+            frameArt.src="cardart3.jpg";
+            frameArtSm.src="cardart3.jpg";
+            cardImageText.value="cardart3.jpg";
+            break;
+        case "cardart3.jpg":
+            frameArt.src="cardart2.jpg";
+            frameArtSm.src="cardart2.jpg";
+            cardImageText.value="cardart2.jpg";
+            break;
+        case "cardart2.jpg":
+            frameArt.src="cardart1.jpg";
+            frameArtSm.src="cardart1.jpg";
+            cardImageText.value="cardart1.jpg";
+            break;
+        case "cardart1.jpg":
+            frameArt.src="nissa.jpg";
+            frameArtSm.src="nissa.jpg";
+            cardImageText.value="nissa.jpg";
+            break;
+
+    }
+}
+
+function NextImage() {
+    switch (frameArtSm.src.split("0/")[1]) {
+        case "nissa.jpg":
+            frameArt.src="cardart1.jpg";
+            frameArtSm.src="cardart1.jpg";
+            cardImageText.value="cardart1.jpg";
+            break;
+        case "cardart1.jpg":
+            frameArt.src="cardart2.jpg";
+            frameArtSm.src="cardart2.jpg";
+            cardImageText.value="cardart2.jpg";
+            break;
+        case "cardart2.jpg":
+            frameArt.src="cardart3.jpg";
+            frameArtSm.src="cardart3.jpg";
+            cardImageText.value="cardart3.jpg";
+            break;
+        case "cardart3.jpg":
+            frameArt.src="cardart4.jpg";
+            frameArtSm.src="cardart4.jpg";
+            cardImageText.value="cardart4.jpg";
+            break;
+        case "cardart4.jpg":
+            frameArt.src="cardart5.jpg";
+            frameArtSm.src="cardart5.jpg";
+            cardImageText.value="cardart5.jpg";
+            break;
+        case "cardart5.jpg":
+            frameArt.src="cardart6.jpg";
+            frameArtSm.src="cardart6.jpg";
+            cardImageText.value="cardart6.jpg";
+            break;
+        case "cardart6.jpg":
+            frameArt.src="cardart7.jpg";
+            frameArtSm.src="cardart7.jpg";
+            cardImageText.value="cardart7.jpg";
+            break;
+        case "cardart7.jpg":
+            frameArt.src="cardart8.jpg";
+            frameArtSm.src="cardart8.jpg";
+            cardImageText.value="cardart8.jpg";
+            break;
+        case "cardart8.jpg":
+            frameArt.src="cardart9.jpg";
+            frameArtSm.src="cardart9.jpg";
+            cardImageText.value="cardart9.jpg";
+            break;
+        case "cardart9.jpg":
+            frameArt.src="cardart10.jpg";
+            frameArtSm.src="cardart10.jpg";
+            cardImageText.value="cardart10.jpg";
+            break;
+        case "cardart10.jpg":
+            frameArt.src="cardart11.jpg";
+            frameArtSm.src="cardart11.jpg";
+            cardImageText.value="cardart11.jpg";
+            break;
+        case "cardart11.jpg":
+            frameArt.src="nissa.jpg";
+            frameArtSm.src="nissa.jpg";
+            cardImageText.value="nissa.jpg";
+            break;
+
+    }
 }
 
 
