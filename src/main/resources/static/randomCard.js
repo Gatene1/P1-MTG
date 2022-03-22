@@ -14,7 +14,7 @@ fetch('/cards').then(card => {
 
 // lists the cards in the database to the screen by using the cards unique multiverse id in the url. Prints imagine of the card.
 let listCard = function() {
-    return '<a href="/viewCard.html?scryfallId='+multiverseId+'"><img class="imageShadow" src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid='+multiverseId+'&type=card"></a>'
+    return '<img class="imageShadow" src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid='+multiverseId+'&type=card">'
     // return '<img src="https://scryfall.com/card/unf/"'+multiverseId+'>'
 }
 
