@@ -9,7 +9,7 @@ CREATE TABLE "coloridentity" (
 );
 CREATE TABLE "rarity" (
      "TypesId" INT NOT NULL PRIMARY KEY,
-     "Type" VARCHAR NOT NULL
+     "Type" INT NOT NULL
 );
 
 CREATE TABLE "cards" (
